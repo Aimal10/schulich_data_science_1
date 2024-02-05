@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Time and Cost Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Lead Times and Costs</h1>
+        <form id="predictForm">
+            <div class="form-group">
+                <label for="productType">Product Type:</label>
+                <select id="productType" name="productType">
+                    <option value="haircare">Haircare</option>
+                    <option value="skincare">Skincare</option>
+                    <option value="cosmetics">Cosmetics</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability:</label>
+                <input type="number" id="availability" name="availability">
+            </div>
+            <button type="button" onclick="predict()">Predict</button>
+        </form>
+        <div id="predictionResults" class="hidden">
+            <h2>Prediction Results</h2>
+            <p id="leadTimeResult"></p>
+            <p id="costResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
