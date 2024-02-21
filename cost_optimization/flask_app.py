@@ -65,6 +65,8 @@ gb_reg.fit(X_train_prepared, Y_train_lead_time)
 # Predicting on the test set
 Y_pred_lead_time = gb_reg.predict(X_test_prepared)
 
+#xyz
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
